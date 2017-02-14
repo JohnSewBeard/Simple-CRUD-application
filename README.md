@@ -1,2 +1,2 @@
 # Simple-CRUD-application
-Using spring-hibernate-maven
+With spring-hibernate-maven
