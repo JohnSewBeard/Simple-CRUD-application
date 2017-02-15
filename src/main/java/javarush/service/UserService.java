@@ -6,15 +6,15 @@ import java.util.List;
 
 public interface UserService {
 
-    void addTeam(User team);
+    void addUser(User user);
 
-    void updateTeam(User team);
+    void updateUser(User user);
 
-    User getTeam(int id);
+    User getUser(int id);
 
-    User searchUser(String name);
+    List<User> searchUsers(String name);
 
-    void deleteTeam(int id);
+    void deleteUser(int id);
 
-    List<User> getTeams();
+    List<User> getUsers();
 }
