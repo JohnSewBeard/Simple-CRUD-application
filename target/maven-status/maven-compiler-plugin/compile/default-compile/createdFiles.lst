@@ -1,9 +1,0 @@
-javarush\controller\UserController.class
-javarush\init\WebAppConfig.class
-javarush\service\UserServiceImpl.class
-javarush\init\Initializer.class
-javarush\dao\UserDAOImpl.class
-javarush\dao\UserDAO.class
-javarush\controller\LinkController.class
-javarush\model\User.class
-javarush\service\UserService.class
