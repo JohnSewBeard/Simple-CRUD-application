@@ -19,7 +19,6 @@ public class UserDAOImpl implements UserDAO {
         return sessionFactory.getCurrentSession();
     }
 
-
     @Override
     public void addUser(User user) {
         getCurrentSession().save(user);
@@ -36,7 +35,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUser(int id) {
-        return getCurrentSession().get(User.class, id);
+        return (User) getCurrentSession().get(User.class, id);
     }
 
     @Override

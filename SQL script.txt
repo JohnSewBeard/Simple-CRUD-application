@@ -1,0 +1,22 @@
+CREATE TABLE `user` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `age` int(11) NOT NULL,
+  `isAdmin` tinyint(1) NOT NULL,
+  `createdDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8
+
+
+----------------
+--INSERTS-------
+----------------
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Bruce Willis', 65, 0, '2017-02-07 16:41:49');
+
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Chuck Norris', 70, 1, '2017-02-07 16:58:08');
+
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Jeckie Chan', 63, 0, '2017-02-09 16:36:23');
+
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Schwarzenegger Arnold', 69, 0, '2017-02-11 18:59:35');
+
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Jack London', 52, 1, '2017-02-11 17:35:14');

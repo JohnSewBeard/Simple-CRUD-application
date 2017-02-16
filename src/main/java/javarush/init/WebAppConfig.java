@@ -1,4 +1,5 @@
 package javarush.init;
+
 import java.util.Properties;
 
 import javax.annotation.Resource;

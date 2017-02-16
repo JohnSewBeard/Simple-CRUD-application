@@ -10,8 +10,8 @@
     <packaging>war</packaging>
 
     <properties>
-        <hibernate.version>5.2.6.Final</hibernate.version>
-        <mysql.connector.version>6.0.5</mysql.connector.version>
+        <hibernate.version>4.2.0.Final</hibernate.version>
+        <mysql.connector.version>5.1.21</mysql.connector.version>
         <spring.version>4.3.2.RELEASE</spring.version>
         <jdk.version>1.8</jdk.version>
     </properties>

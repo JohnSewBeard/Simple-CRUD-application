@@ -13,7 +13,7 @@
 <p>${message}</p>
 
 <c:if test="${success}">
-    <table border="1px" cellpadding="0" cellspacing="0" >
+    <table border="1px" cellpadding="0" cellspacing="0">
         <thead>
         <tr>
             <th width="10%">id</th>
@@ -24,21 +24,22 @@
             <th width="10%">actions</th>
         </tr>
         </thead>
-        <tr>
-            <td>${user.id}</td>
-            <td>${user.name}</td>
-            <td>${user.age}</td>
-            <td>${user.isAdmin}</td>
-            <td>${user.createdDate}</td>
-            <td>
-                <a href="${pageContext.request.contextPath}/user/edit/${user.id}">Edit</a><br/>
-                <a href="${pageContext.request.contextPath}/user/delete/${user.id}">Delete</a><br/>
-            </td>
-        </tr>
+        <c:forEach var="user" items="${users}">
+            <tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.age}</td>
+                <td>${user.isAdmin}</td>
+                <td>${user.createdDate}</td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/user/edit/${user.id}">Edit</a><br/>
+                    <a href="${pageContext.request.contextPath}/user/delete/${user.id}">Delete</a><br/>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
 </c:if>
 
 <p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
-
 </body>
 </html>

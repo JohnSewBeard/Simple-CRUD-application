@@ -9,6 +9,8 @@
 </head>
 <body>
 <h1>Home page</h1>
+<p>${message}</p>
+
 <form:form method="POST" action="${pageContext.request.contextPath}/user/search" >
     <table>
         <tr>
