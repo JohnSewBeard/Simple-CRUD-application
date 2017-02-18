@@ -12,8 +12,12 @@ import java.util.List;
 @Repository
 public class UserDAOImpl implements UserDAO {
 
+    private final SessionFactory sessionFactory;
+
     @Autowired
-    private SessionFactory sessionFactory;
+    public UserDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     private Session getCurrentSession() {
         return sessionFactory.getCurrentSession();

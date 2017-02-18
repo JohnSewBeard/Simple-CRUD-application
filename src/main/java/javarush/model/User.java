@@ -14,7 +14,7 @@ public class User {
     @GeneratedValue
     private int id;
     private String name;
-    private int age;
+    private Integer age;
     private boolean isAdmin;
     private Timestamp createdDate;
 
@@ -34,11 +34,11 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
