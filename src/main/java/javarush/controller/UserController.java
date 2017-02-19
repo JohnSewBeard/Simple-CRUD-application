@@ -53,7 +53,11 @@ public class UserController {
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
-    public ModelAndView editingUser (@ModelAttribute User user) {
+    public ModelAndView editingUser (@ModelAttribute @Valid User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return new ModelAndView("edit-user-form");
+        }
+
         ModelAndView modelAndView = new ModelAndView("home");
         userService.updateUser(user);
 

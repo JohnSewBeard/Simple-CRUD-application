@@ -7,6 +7,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        .error { color: red; font-size: 0.9em; font-weight: bold; }
+    </style>
     <title>Edit user page</title>
 </head>
 <body>
@@ -19,10 +22,12 @@
         <tr>
             <td>Name:</td>
             <td><form:input path="name" /></td>
+            <td><form:errors path="name" cssClass="error" /></td>
         </tr>
         <tr>
             <td>Age:</td>
             <td><form:input path="age" /></td>
+            <td><form:errors path="age" cssClass="error" /></td>
         </tr>
         <tr>
             <td>Is admin:</td>

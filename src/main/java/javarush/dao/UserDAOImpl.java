@@ -53,6 +53,11 @@ public class UserDAOImpl implements UserDAO {
     //return List because we can have few users at same name
     public List<User> searchUsers(String name) {
         List<User> result = new ArrayList<>();
+
+        //Checks correct input
+        if (name.length() < 2 && name.length() > 25)
+            return result;
+
         for (User user : getUsers()) {
             if (user.getName().equals(name))
                 result.add(user);
