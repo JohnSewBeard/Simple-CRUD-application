@@ -1,5 +1,8 @@
 package javarush.model;
 
+import javarush.validation.jsr303.Age;
+import javarush.validation.jsr303.Name;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,7 +16,9 @@ public class User {
     @Id
     @GeneratedValue
     private int id;
+    @Name
     private String name;
+    @Age
     private Integer age;
     private boolean isAdmin;
     private Timestamp createdDate;
