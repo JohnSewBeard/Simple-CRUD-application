@@ -1,2 +1,2 @@
 # Simple-CRUD-application
-With spring-hibernate-maven using Java-base configuration
+spring-hibernate-maven using Java-based configuration with validation

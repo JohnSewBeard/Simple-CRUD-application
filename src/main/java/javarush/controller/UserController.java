@@ -22,14 +22,14 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @GetMapping("/add")
     public ModelAndView addUserPage() {
         ModelAndView modelAndView = new ModelAndView("add-user-form");
         modelAndView.addObject("user", new User());
         return modelAndView;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @PostMapping("/add")
     public ModelAndView addingUser(@ModelAttribute @Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ModelAndView("add-user-form");
@@ -44,7 +44,7 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    @GetMapping("/edit/{id}")
     public ModelAndView editUserPage(@PathVariable int id) {
         ModelAndView modelAndView = new ModelAndView("edit-user-form");
         User user = userService.getUser(id);
@@ -52,7 +52,7 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
+    @PostMapping("/edit/{id}")
     public ModelAndView editingUser (@ModelAttribute @Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ModelAndView("edit-user-form");
@@ -67,7 +67,7 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    @PostMapping("/search")
     public ModelAndView searchUsers(@RequestParam String name) {
         ModelAndView modelAndView = new ModelAndView("found-by-name");
         List<User> users = userService.searchUsers(name);
@@ -88,7 +88,7 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    @GetMapping("/delete/{id}")
     public ModelAndView deleteUser(@PathVariable int id) {
         ModelAndView modelAndView = new ModelAndView("home");
         userService.deleteUser(id);
@@ -99,7 +99,7 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public ModelAndView listOfUsers() {
         ModelAndView modelAndView = new ModelAndView("list-of-users");
         List<User> users = userService.getUsers();

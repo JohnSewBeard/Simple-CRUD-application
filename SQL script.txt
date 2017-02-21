@@ -11,12 +11,12 @@ CREATE TABLE `user` (
 ----------------
 --INSERTS-------
 ----------------
-INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Bruce Willis', 65, 0, '2017-02-07 16:41:49');
+INSERT INTO test.user (name, age, isAdmin) VALUES ('Bruce Willis', 65, 0);
 
 INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Chuck Norris', 70, 1, '2017-02-07 16:58:08');
 
-INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Jeckie Chan', 63, 0, '2017-02-09 16:36:23');
+INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Jackie Chan', 63, 0, '2017-02-09 16:36:23');
 
-INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Schwarzenegger Arnold', 69, 0, '2017-02-11 18:59:35');
+INSERT INTO test.user (name, age, isAdmin) VALUES ('Schwarzenegger Arnold', 69, 0);
 
 INSERT INTO test.user (name, age, isAdmin, createdDate) VALUES ('Jack London', 52, 1, '2017-02-11 17:35:14');
